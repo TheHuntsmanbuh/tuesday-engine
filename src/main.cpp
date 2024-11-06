@@ -14,7 +14,7 @@
 
 using namespace std;
 
-const string version = "Tuesday Engine ALPHA 0.0.1";
+const string version = "Tuesday Engine ALPHA 0.0.2";
 const unsigned int width = 1920;
 const unsigned int height = 1080;
 
@@ -85,7 +85,7 @@ int main()
 
 	// creates the camera object
 	Camera camera(width, height, glm::vec3(0.0f, 0.0f, 2.0f));
-    Model model("src/resources/tmdl/map/scene.gltf");
+    Model model("src/resources/tmdl/Misc/tuesdayloading.gltf");
 	// Main while loop
 	while (!glfwWindowShouldClose(window))
 	{

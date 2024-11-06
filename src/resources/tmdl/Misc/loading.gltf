@@ -18,6 +18,16 @@
 			"name":"Text.001"
 		}
 	],
+	"materials":[
+		{
+			"doubleSided":true,
+			"name":"texture",
+			"pbrMetallicRoughness":{
+				"metallicFactor":0,
+				"roughnessFactor":0
+			}
+		}
+	],
 	"meshes":[
 		{
 			"name":"Text.001",
@@ -28,7 +38,8 @@
 						"NORMAL":1,
 						"TEXCOORD_0":2
 					},
-					"indices":3
+					"indices":3,
+					"material":0
 				}
 			]
 		}
@@ -40,13 +51,13 @@
 			"count":2781,
 			"max":[
 				5.186089038848877,
-				0.10000012814998627,
-				0.6922793388366699
+				0.6922793388366699,
+				3.013494875858669e-08
 			],
 			"min":[
 				0.05669282749295235,
-				-3.013494875858669e-08,
-				-1.235001802444458
+				-1.235001802444458,
+				-0.10000012814998627
 			],
 			"type":"VEC3"
 		},

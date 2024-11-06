@@ -21,11 +21,7 @@
 	"materials":[
 		{
 			"doubleSided":true,
-			"name":"texture",
-			"pbrMetallicRoughness":{
-				"metallicFactor":0,
-				"roughnessFactor":0
-			}
+			"name":"Material"
 		}
 	],
 	"meshes":[
@@ -112,4 +108,9 @@
 			"uri":"loading.bin"
 		}
 	]
+	"images": [
+    {
+      "uri": "textures/tuesdayloading.png"
+    }
+    ]
 }
