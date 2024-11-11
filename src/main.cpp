@@ -1,20 +1,13 @@
-#include<iostream>
-#include<string>
-#include<glad/glad.h>
-#include<GLFW/glfw3.h>
-#include<cmath>
-#include<stb/stb_image.h>
-#include<glm/glm.hpp>
-#include<glm/gtc/matrix_transform.hpp>
-#include<glm/gtc/type_ptr.hpp>
+#include"includes.h" // the includes header should be updated if any new headers are made!!
 
-
+// adds the camera object/payer controller(todo)
 #include"camera.h"
+// model loader goes here
 #include"Model.h"
 
 using namespace std;
 
-const string version = "Tuesday Engine ALPHA 0.0.2";
+const string version = "Tuesday Engine ALPHA 0.0.3";
 const unsigned int width = 1920;
 const unsigned int height = 1080;
 
@@ -59,7 +52,7 @@ int main()
 	// Specify the viewport of OpenGL in the Window
 	// In this case the viewport goes from x = 0, y = 0, to x = 800, y = 800
 	glViewport(0, 0, width, height);
-
+	// loads default shader files
     Shader shaderProgram("src/shaders/default.vert", "src/shaders/default.frag");
 	
 	// Take care of all the light related things
@@ -69,16 +62,10 @@ int main()
 	lightModel = glm::translate(lightModel, lightPos);
 
 	shaderProgram.Activate();
+
 	glUniform4f(glGetUniformLocation(shaderProgram.ID, "lightColor"), lightColor.x, lightColor.y, lightColor.z, lightColor.w);
+
 	glUniform3f(glGetUniformLocation(shaderProgram.ID, "lightPos"), lightPos.x, lightPos.y, lightPos.z);
-	
-
-
-
-
-
-	
-	
 
 	glEnable(GL_DEPTH_TEST);
 
